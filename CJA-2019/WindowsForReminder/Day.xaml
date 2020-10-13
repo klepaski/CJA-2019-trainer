@@ -1,0 +1,49 @@
+﻿<Window x:Class="CJA_2019.WindowsForReminder.Day"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CJA_2019.WindowsForReminder"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+    Title="Day" Height="330" Width="245" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Color x:Key="Color1">White</Color>
+    </Window.Resources>
+    <Border BorderBrush="Black" BorderThickness="10 0 10 10">
+        <StackPanel>
+            <Grid Height="50" Background="Black">
+                <Button x:Name="btnCancel" Height="45" Width="70" HorizontalAlignment="Left" Background="{x:Null}" BorderThickness="0" Margin="-10 0 0 0" Click="btnCancel_Click">
+                    <materialDesign:PackIcon Kind="ArrowLeft" Foreground="White" Height="45" Width="45" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Button>
+                <TextBlock Text="Повторить" FontFamily="Garamond" VerticalAlignment="Center" Margin="55,10,10,10" Foreground="White" FontSize="25"/>
+            </Grid>
+
+            <StackPanel x:Name="stpDays">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FFF9A7B6" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <CheckBox x:Name="chbMonday" Content="Понедельник" FontFamily="Garamond" FontSize="20" Margin="10 5 0 0"/>
+                <CheckBox x:Name="chbThuesday" Content="Вторник" FontFamily="Garamond" FontSize="20" Margin="10 5 0 0 "/>
+                <CheckBox x:Name="chbWednesday" Content="Среда" FontFamily="Garamond" FontSize="20" Margin="10 5 0 0"/>
+                <CheckBox x:Name="chbThursday" Content="Четверг" FontFamily="Garamond" FontSize="20" Margin="10 5 0 0"/>
+                <CheckBox x:Name="chbFriday" Content="Пятница" FontFamily="Garamond" FontSize="20" Margin="10 5 0 0"/>
+                <CheckBox x:Name="chbSaturday" Content="Суббота" FontFamily="Garamond" FontSize="20" Margin="10 5 0 0"/>
+                <CheckBox x:Name="chbSunday" Content="Воскресение" FontFamily="Garamond" FontSize="20" Margin="10 5 0 5"/>
+            </StackPanel>
+            <Grid Height="64" Background="Black">
+                <Button x:Name="btnOK" Content="Готово" Height="Auto" FontFamily="Garamond" FontSize="25" Click="btnOK_Click" Margin="21,12,22,10" BorderBrush="{x:Null}" Foreground="Black">
+                    <Button.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="White"/>
+                        </RadialGradientBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>

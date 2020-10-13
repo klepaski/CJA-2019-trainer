@@ -1,0 +1,44 @@
+﻿<Window x:Class="CJA_2019.Windows.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CJA_2019.Windows"
+        mc:Ignorable="d"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="600" Width="420" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Border BorderBrush="Black" BorderThickness="10 0 10 10" Background="White">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="/CJA-2019;component/Images/БЛЕСТКИ.jpg"/>
+            </Grid.Background>
+            <Grid Height="60" VerticalAlignment="Top" Background="Black">
+                <Button x:Name="btnClose" Height="50" Width="60" HorizontalAlignment="Left" Margin="5 0" Click="btnClose_Click">
+                    <materialDesign:PackIcon Kind="ArrowLeft" Height="50" Width="50" VerticalAlignment="Center" Margin="-10 0 0 0"/>
+                </Button>
+            </Grid>
+
+            <Image Source="/CJA-2019;component/Images/Гантель.png" Height="150" Width="150" VerticalAlignment="Top" Margin="0 45"/>
+
+            <Rectangle Height="200" Width="370" Fill="Black" RadiusY="20" RadiusX="20" Margin="0 60 0 0"/>
+
+            <Grid Height="200" Width="360" Margin="0 60 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="53*"/>
+                    <ColumnDefinition Width="67*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="ВХОД" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Garamond" FontSize="36" Margin="92,-63,114,0" Width="154" Grid.ColumnSpan="2" Height="60" TextAlignment="Center" FontWeight="Bold"/>
+                <StackPanel VerticalAlignment="Center" Margin="10,28" Grid.ColumnSpan="2">
+                    <TextBox x:Name="txbLogin" materialDesign:HintAssist.Hint="ЛОГИН" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0, 10" FontSize="20" Foreground="White"/>
+                    <PasswordBox x:Name="psbPassword" materialDesign:HintAssist.Hint="ПАРОЛЬ" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0, 10" FontSize="20" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+
+            <Button x:Name="btnRegister" Width="170" Height="40" BorderBrush="#FF1C1C42" Foreground="Black" Background="White" VerticalAlignment="Bottom" HorizontalAlignment="Right"  Margin="0,0,20,95" FontSize="25" FontFamily="Impact" Content="РЕГИСТРАЦИЯ" Click="btnRegister_Click" FontWeight="Normal"/>
+            <Button x:Name="btnSingIn" Width="170" Height="40" IsDefault="True" BorderBrush="#FF1C1C42" Foreground="Black" Background="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20,0,0,95" FontSize="25" FontFamily="Impact" Content="ВОЙТИ" Click="btnSingIn_Click" FontWeight="Normal"/>
+
+            <TextBlock Text="ВЕРСИЯ: g510" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 30" FontFamily="Garamond" FontSize="26" Foreground="White"/>
+            <TextBlock Text="© БГТУ 2019" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 5" FontFamily="Garamond" FontSize="20" Foreground="White"/>
+        </Grid>
+    </Border>
+</Window>
